@@ -7,19 +7,24 @@ Things you may want to cover:
 
 TODO: Write notes here.
 
-##Setup Projet
+##	Setup Projet
+
 git clone https://git.heroku.com/photos-sharing.git 
 
-##Run Bundle
+##	Run Bundle
+
 bundle install
 
-##Database create
+##	Database create
+
 rails db:create
 
-##Database migrate
+##	Database migrate
+
 rails db:migrate
 
-##Create Admin
+##	Create Admin
+
 rails db:seed
 default email: admin@example.com
 default password: password
