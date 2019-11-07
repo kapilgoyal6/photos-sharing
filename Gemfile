@@ -64,7 +64,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'carrierwave', '~> 2.0'
 gem 'activeadmin'
-gem 'bootstrap'
 gem "fog-aws"
 gem "mime-types"
 gem "mini_magick"
