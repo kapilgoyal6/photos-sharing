@@ -5,20 +5,21 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+TODO: Write notes here.
 
-* System dependencies
+##Setup Projet
+git clone https://git.heroku.com/photos-sharing.git 
 
-* Configuration
+##Run Bundle
+bundle install
 
-* Database creation
+##Database create
+rails db:create
 
-* Database initialization
+##Database migrate
+rails db:migrate
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##Create Admin
+rails db:seed
+default email: admin@example.com
+default password: password
