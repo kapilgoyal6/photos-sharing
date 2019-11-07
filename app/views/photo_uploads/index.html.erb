@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="text-center text-white">Gallery</h1>
+<%#= link_to 'New Photo Upload', new_photo_upload_path %>
+    <!-- Page Content -->
+   <div class="container page-top">
+        <div class="row">
+          <% @photo_uploads.each do |photo_upload| %>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+              
+                <!-- <a href="https://images.pexels.com/photos/62307/air-bubbles-diving-underwater-blow-62307.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox"> -->
+                <a href="/photo_uploads/<%= photo_upload.id%>" class="fancybox" rel="ligthbox">
+                  <%= image_tag photo_upload.image.url.to_s, class:"zoom img-fluid",  alt: "" %>
+                </a>
+            </div>
+          <% end %>
+       </div>
+    </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+  $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+    
+    $(".zoom").hover(function(){
+    
+    $(this).addClass('transition');
+  }, function(){
+        
+    $(this).removeClass('transition');
+  });
+});
+</script>

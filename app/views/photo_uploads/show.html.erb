@@ -1,0 +1,41 @@
+<p class="text-center" style="margin-top: 100px;">
+ 	<%= image_tag @photo_upload.image.url.to_s, :size => "400x350" %>
+</p>
+
+<%#= link_to 'Edit', edit_photo_upload_path(@photo_upload) %> 
+<!-- <div class="text-center ">
+	<%#= link_to 'Share', photo_uploads_path, :class => 'text-white' %>
+</div>
+ -->
+
+<!-- Button to Open the Modal -->
+<center>
+	<button type="button" class="btn btn-primary btn-center" data-toggle="modal" data-target="#myModal">
+	  Share
+	</button>
+</center>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Image Url</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <%= request.url %>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
